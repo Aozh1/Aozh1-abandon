@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80.html">
+    <link rel="canonical" href="http://localhost:4000/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -84,11 +84,11 @@
                     </li>
                     
                     <li>
-                        <a href="/about.html">About</a>
+                        <a href="/about/">About</a>
                     </li>
                     
                     <li>
-                        <a href="/tags.html">Tags</a>
+                        <a href="/tags/">Tags</a>
                     </li>
                     
                 </ul>
@@ -205,11 +205,11 @@
   <p>https://developer.android.com/training/</p>
 </blockquote>
 
-<p>#谷歌官方安卓开发学习笔记（一）</p>
+<h1 id="谷歌官方安卓开发学习笔记一">谷歌官方安卓开发学习笔记（一）</h1>
 
-<p>##创建你的第一个安卓程序</p>
+<h2 id="创建你的第一个安卓程序">创建你的第一个安卓程序</h2>
 
-<p>###Hello world </p>
+<h3 id="hello-world">Hello world </h3>
 
 <p>1.下载Android Stdio （下文简称Android Stdio 为AS）</p>
 
@@ -233,7 +233,7 @@
 
 <p> 这里面你仔细观察会发现有一行代码叫</p>
 
-<p> <code class="highlighter-rouge">TextView</code></p>
+<p> <code class="highlighter-rouge"> TextView </code></p>
 
 <p>这个TextView的意思就是显示文字，如果你不喜欢Hello World这句话，你可以修改这一行为android：text=“想要的文字”</p>
 
@@ -283,6 +283,40 @@
 
 
 
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
 
     <!-- Footer -->
