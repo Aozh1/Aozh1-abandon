@@ -5,20 +5,61 @@
     <description>放弃幻想 轻装前进</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 10 Feb 2018 00:55:27 +0800</pubDate>
-    <lastBuildDate>Sat, 10 Feb 2018 00:55:27 +0800</lastBuildDate>
+    <pubDate>Thu, 15 Feb 2018 03:05:26 +0800</pubDate>
+    <lastBuildDate>Thu, 15 Feb 2018 03:05:26 +0800</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
-        <title>测试</title>
-        <description>&lt;p&gt;#随便写点东西
-测试一下&lt;/p&gt;
+        <title>安卓学习笔记（一）</title>
+        <description>&lt;p&gt;&lt;em&gt;前言：国内的安卓开发教程大多数居然还是基于Eclipse在教学，作为一个学习安卓开发的小白而言太不友好了，谷歌的官方IDE Android Stdio 都出来快四年了，而且谷歌非常友好的推出了training课程，学习自然要做笔记，希望能够对自己和看这篇文章的人有所提升。&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;哇，为什么不支持markdown？&lt;/p&gt;
+&lt;p&gt;谷歌官方网址&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://developer.android.com/training/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;#谷歌官方安卓开发学习笔记（一）&lt;/p&gt;
+
+&lt;p&gt;##创建你的第一个安卓程序&lt;/p&gt;
+
+&lt;p&gt;###Hello world &lt;/p&gt;
+
+&lt;p&gt;1.下载Android Stdio （下文简称Android Stdio 为AS）&lt;/p&gt;
+
+&lt;p&gt;2.安装以及运行（如果在谷歌官网下载的AS，需要全过程挂好科学上网工具）&lt;/p&gt;
+
+&lt;p&gt;3.打开AS, 看到如下图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/10632197-44415d27564ea97b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4.点击第一项：start a new Android Studio project&lt;/p&gt;
+
+&lt;p&gt;5.会出现一些新的界面，不用管，一些基本的项目设置，一直点next就好（在 &lt;strong&gt;Add an Activity to Mobile&lt;/strong&gt; 这一项, 选 &lt;strong&gt;Empty Activity&lt;/strong&gt; ），直到出现下图中的界面。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/10632197-eee28f407dab7385.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;到此，你的第一个hello world程序其实已经写好了，为什么呢？因为创建的文件默认就是生成一个只有Hello World 的空白工程文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/10632197-a25d7bc93dbd4da0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们来解释一下这个XML文件，它是 activity 的 UI（你可以理解为是一个程序的外观）.&lt;/p&gt;
+
+&lt;p&gt; 这里面你仔细观察会发现有一行代码叫&lt;/p&gt;
+
+&lt;p&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;TextView&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这个TextView的意思就是显示文字，如果你不喜欢Hello World这句话，你可以修改这一行为android：text=“想要的文字”&lt;/p&gt;
+
+&lt;p&gt;到此，你的第一个安卓程序，就这样诞生了，插上你的安卓手机，点击&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/10632197-5b7823f7730295ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;即可运行你的第一个安卓程序（手机记得打开usb调试，Windows要安好对应的adb驱动）&lt;/p&gt;
 </description>
-        <pubDate>Sat, 10 Feb 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/02/10/%E6%B5%8B%E8%AF%95/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/02/10/%E6%B5%8B%E8%AF%95/</guid>
+        <pubDate>Thu, 15 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80.html</guid>
         
         
       </item>

@@ -10,7 +10,7 @@
     <meta name="keywords"  content="">
     <meta name="theme-color" content="#000000">
     
-    <title>AZ Blog</title>
+    <title>安卓学习笔记（一） - AZ Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/404.html">
+    <link rel="canonical" href="http://localhost:4000/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80.html">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -152,23 +152,137 @@
 </script>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/404-bg.jpg')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>404</h1>
-					<span class="subheading">哈？这是哪儿？</span>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-desk.png" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-desk.png')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>安卓学习笔记（一）</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by AoZhi on February 15, 2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p><em>前言：国内的安卓开发教程大多数居然还是基于Eclipse在教学，作为一个学习安卓开发的小白而言太不友好了，谷歌的官方IDE Android Stdio 都出来快四年了，而且谷歌非常友好的推出了training课程，学习自然要做笔记，希望能够对自己和看这篇文章的人有所提升。</em></p>
+
+<p>谷歌官方网址</p>
+
+<blockquote>
+  <p>https://developer.android.com/training/</p>
+</blockquote>
+
+<p>#谷歌官方安卓开发学习笔记（一）</p>
+
+<p>##创建你的第一个安卓程序</p>
+
+<p>###Hello world </p>
+
+<p>1.下载Android Stdio （下文简称Android Stdio 为AS）</p>
+
+<p>2.安装以及运行（如果在谷歌官网下载的AS，需要全过程挂好科学上网工具）</p>
+
+<p>3.打开AS, 看到如下图</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10632197-44415d27564ea97b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" /></p>
+
+<p>4.点击第一项：start a new Android Studio project</p>
+
+<p>5.会出现一些新的界面，不用管，一些基本的项目设置，一直点next就好（在 <strong>Add an Activity to Mobile</strong> 这一项, 选 <strong>Empty Activity</strong> ），直到出现下图中的界面。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10632197-eee28f407dab7385.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" /></p>
+
+<p>到此，你的第一个hello world程序其实已经写好了，为什么呢？因为创建的文件默认就是生成一个只有Hello World 的空白工程文件。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10632197-a25d7bc93dbd4da0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" /></p>
+
+<p>我们来解释一下这个XML文件，它是 activity 的 UI（你可以理解为是一个程序的外观）.</p>
+
+<p> 这里面你仔细观察会发现有一行代码叫</p>
+
+<p> <code class="highlighter-rouge">TextView</code></p>
+
+<p>这个TextView的意思就是显示文字，如果你不喜欢Hello World这句话，你可以修改这一行为android：text=“想要的文字”</p>
+
+<p>到此，你的第一个安卓程序，就这样诞生了，插上你的安卓手机，点击</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10632197-5b7823f7730295ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" /></p>
+
+<p>即可运行你的第一个安卓程序（手机记得打开usb调试，Windows要安好对应的adb驱动）</p>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+
+                <!--Gitalk评论start  -->
+                
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
 
 
     <!-- Footer -->
