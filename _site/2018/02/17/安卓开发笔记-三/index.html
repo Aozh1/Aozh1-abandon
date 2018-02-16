@@ -10,7 +10,7 @@
     <meta name="keywords"  content="">
     <meta name="theme-color" content="#000000">
     
-    <title>AZ Blog</title>
+    <title>安卓学习笔记（三） - AZ Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/2018/02/17/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%89/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -152,107 +152,219 @@
 </script>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/post-bg-desk.png')">
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-desk.png" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-desk.png')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>AoZhi</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">放弃幻想 轻装前进</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>安卓学习笔记（三）</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by AoZhi on February 17, 2018</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-        
-<!-- NO SIDEBAR -->
-    <!-- PostList Container -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p><em>开始为第一个用户界面添加一个小功能</em>
+（注：android stdio的版本为3.0.1，不同版本可能存在一定的差异，学习时建议在谷歌官网下载最新版）</p>
+
+<h1 id="给按钮添加功能">给按钮添加功能</h1>
+
+<ul>
+  <li>打开 app &gt; java &gt; com.example.myfirstapp（你当初创建的文件名） &gt; MainActivity 添加几行代码，现在暂时不了解这些代码没有关系，可以理解为给程序添加功能所必要的条件。
+    <h2 id="java版本">java版本</h2>
+    <p>```
+public class MainActivity extends AppCompatActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
+  }</p>
+
+    <p>/** Called when the user taps the Send button */
+  public void sendMessage(View view) {
+      // Do something in response to button
+  }
+}</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## KOTLIN（2017年开始支持kotlin）
+</code></pre></div></div>
+<p>class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Called when the user taps the Send button */
+fun sendMessage(view: View) {
+    // Do something in response to button
+} }
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+添加了这些代码后，你可能会看到如图所示的许多小错误，下面我们来修复他们
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-719717d375ffc76a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+选择错误的地方，然后按下快捷键option+enter 会出现快捷修复选项，我们选择import class
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-b5d0c9f5e493a59a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 返回 activity_main.xml文件，我们添加button和这个sendmessage之间的关联。
+选择button，然后在属性页面中搜索oncilck（意思是当你触碰这个按钮时会触发的功能）
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-20777ed7591cc221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+我们选择sendmessage，也就是我们刚刚在代码中添加的那一行功能。
+现在只要我们点击这个按钮，系统就会响应sendmessage这一几行代码。
+
+# 建立一个intend
+&gt; intend通常用于两个活动之间提供运行时绑定的对象
+
+- 在MainActivity，添加EXTRA_MESSAGE和 sendMessage代码(目前只提供java)
+
+</code></pre></div></div>
+<p>public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = “com.example.myfirstapp.MESSAGE”;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Called when the user taps the Send button */
+public void sendMessage(View view) {
+    Intent intent = new Intent(this, DisplayMessageActivity.class);
+    EditText editText = (EditText) findViewById(R.id.editText);
+    String message = editText.getText().toString();
+    intent.putExtra(EXTRA_MESSAGE, message);
+    startActivity(intent);
+} }
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+添加完后，你的代码应该是这个样式的
+（仍有部分错误：DisplayMessageActivity）
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-1d8ee1a4546b5859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+不过没有关系，现在我们就来解决它
+
+在project窗口中，右键单击app 文件夹选择New &gt; Activity &gt; Empty Activity.
+
+更改这个新的activity的名字为displaymessageactivity， 点finish
+
+![imag.png](http://upload-images.jianshu.io/upload_images/10632197-b933952013d6b4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+# 添加文字反馈
+
+我们创建好了这个新的空白的activity后，打开app &gt; res &gt; layout &gt; activity_display_message.xml.
+
+像之前学过的一样，这次我们添加一个textview（还记得第一节课的helloworld吗？），唯一的不同是记得打开图上红框的按钮
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-a26f96514ac729b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+可以在属性面板给他添加你喜欢颜色以及大小
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-2ff8c9a29d55e61b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+# 显示文字
+打开DisplayMessageActivity文件，添加如下代码
+
+</code></pre></div></div>
+<p>@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_display_message);</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Get the Intent that started this activity and extract the string
+Intent intent = getIntent();
+String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+
+// Capture the layout's TextView and set the string as its text
+TextView textView = findViewById(R.id.textView);
+textView.setText(message); }
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>如果代码正确，应该显示为下图（有不对的地方请用option+enter自动修复）
+![image.png](http://upload-images.jianshu.io/upload_images/10632197-e434dd76dfc02536.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#添加导航栏
+
+部分安卓手机是没有返回按钮的，所以我们要给他添加一个导航栏
+
+打开app &gt; manifests &gt; AndroidManifest.xml
+
+添加如下代码
+
+</code></pre></div></div>
+<activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
+    <!-- The meta-data tag is required if you support API level 15 and lower -->
+    <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
+</activity>
+<p>```</p>
+
+<p>好了，到这里，你的第一个有着完整功能的app就建好了，插上你的安卓手机，安装你亲手写的app试试吧，他的效果应该就像下图一样</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/10632197-fd36dfa799e93402.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%BA%8C/" data-toggle="tooltip" data-placement="top" title="安卓学习笔记（二）">
+                        Previous<br>
+                        <span>安卓学习笔记（二）</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+
+                <!--Gitalk评论start  -->
                 
-<div class="post-preview">
-    <a href="/2018/02/17/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%89/">
-        <h2 class="post-title">
-            安卓学习笔记（三）
-        </h2>
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
         
-        <div class="post-content-preview">
-            开始为第一个用户界面添加一个小功能
-（注：android stdio的版本为3.0.1，不同版本可能存在一定的差异，学习时建议在谷歌官网下载最新版）
 
-给按钮添加功能
-
-
-  打开 app &gt; java &gt; com.example.myfirstapp（你当初创建的文件名） &gt; MainActivity 添加几行代码，现在暂时不了解这些代码没有关系，可以理解为给程序添加功能...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by AoZhi on February 17, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%BA%8C/">
-        <h2 class="post-title">
-            安卓学习笔记（二）
-        </h2>
-        
-        <div class="post-content-preview">
-            
-  学习了如何开发一个非常简单的安卓工程：Hello World 之后，现在应该开始学习最初步的用户交互界面了 *
-
-
-
-
-构建一个简单的用户界面
-
-  Android应用程序的用户界面是使用布局 （ViewGroup对象）和小部件（View对象）的层次结构构建的。布局是不可见的容器，用于控制其子视图在屏幕上的位置。小部件是UI组件，例如按钮和文本框。
-
-
-上面的话看起来异常难懂是不是？没...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by AoZhi on February 15, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%80/">
-        <h2 class="post-title">
-            安卓学习笔记（一）
-        </h2>
-        
-        <div class="post-content-preview">
-            前言：国内的安卓开发教程大多数居然还是基于Eclipse在教学，作为一个学习安卓开发的小白而言太不友好了，谷歌的官方IDE Android Stdio 都出来快四年了，而且谷歌非常友好的推出了training课程，学习自然要做笔记，希望能够对自己和看这篇文章的人有所提升。
-
-谷歌官方网址
-
-
-  https://developer.android.com/training/
-
-
-谷歌官方安卓...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by AoZhi on February 15, 2018
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-
-            </div>
     <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -265,9 +377,48 @@
                 <!-- Friends Blog -->
                 
             </div>
-        
-	</div>
-</div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
 
     <!-- Footer -->
