@@ -5,9 +5,237 @@
     <description>放弃幻想 轻装前进</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 17 Feb 2018 03:04:19 +0800</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 03:04:19 +0800</lastBuildDate>
+    <pubDate>Wed, 07 Mar 2018 20:32:37 +0800</pubDate>
+    <lastBuildDate>Wed, 07 Mar 2018 20:32:37 +0800</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>一篇文章了解HTML5</title>
+        <description>&lt;h1 id=&quot;一篇文章了解html5&quot;&gt;一篇文章了解HTML5&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;市面上的html5教程冗长且难于理解，实际上html5是一门非常容易入门的语言，本篇文章让你初步了解html5，进入建立网站的大门&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;认识基本结构&quot;&gt;认识基本结构&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 这个是头文件 --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;          
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 这个是html的标志 --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;          
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 这儿填你需要引入的文件，以后再讲 --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 这个理解为引入的字符 --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 两个title之间可以填入网站的名字 --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;          
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- body，顾名思义，网页的主体 --&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;认识h5基本结构&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;两个p之间可以插入文字，也就是段落&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 结束网页内容 --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;处理文字&quot;&gt;处理文字&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML使用&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt;标签定义段落，具体使用方法如下：
+```&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果你想高亮段落中的某一段文字，可以使用  `&amp;lt;mark&amp;gt;`标签
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;mark&gt;我是被高亮的部分&lt;/mark&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果想加粗某一段文字，可以使用`&amp;lt;b&amp;gt;`标签
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;Bold Text Here&lt;/b&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果想实现某一段文字的倾斜，可以使用`&amp;lt;i&amp;gt;`或者`&amp;lt;em&amp;gt;`标签
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;i&gt;Italicized Text Here&lt;/i&gt;
+&lt;em&gt;Italicized Text Here&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果想给文字添加下划线，可以使用`&amp;lt;u&amp;gt;`标签
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;u&gt;mispelled&lt;/u&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果想标记某段文字让他显示省略形式，可以使用`&amp;lt;abbr&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果要标记某段文字被删除，可以使用`&amp;lt;del&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;del&gt;Deleted Text&lt;/del&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+- 如果要插入某段文字，使用`&amp;lt;ins&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;ins&gt;New Text&lt;/ins&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 文字的上标和下标
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;sup&gt;superscript here&lt;/sup&gt;
+&lt;!-- 这是上标 --&gt;
+&lt;sub&gt;subscript here&lt;/sub&gt;
+&lt;!-- 这是下标 --&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## 处理链接
+
+- HTML链接使用`&amp;lt;a&amp;gt;`标签定义你想定义的东西，东西链接地址在`href`属性中进行指定。
+
+
+- 比如你想实现点击某一段文字，打开网页的效果，可以敲入如下代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://我的网站地址&quot;&gt;我想去的网站&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 上文的链接改成你喜欢的网站链接，即可实现上文所说的效果。
+
+- 如果要链接另外一个标题的话，可以写下如下的代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;Topic1&quot;&gt;First topic&lt;/h2&gt;
+&lt;p&gt;Content about the first topic&lt;/p&gt;
+&lt;h2 id=&quot;Topic2&quot;&gt;Second topic&lt;/h2&gt;
+&lt;p&gt;Content about the second topic&lt;/p&gt;
+&lt;h1&gt;Table of Contents&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;#Topic1&quot;&gt;Click to jump to the First Topic&lt;/a&gt;
+&lt;a href=&quot;#Topic2&quot;&gt;Click to jump to the Second Topic&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 这段话的意思就是点击jump to first/second Topic 可以跳转到第一/二个标题。
+
+- 当然，链接的内容还可以是电话，例如下面这行代码：
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;tel:1234567890&quot;&gt;Call us&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  当有用户点击上面这行代码的时候，他的设备会为他自动跳转电话界面
+
+- 如果想在一个新的窗口打开跳转的网页的话，可以这么处理
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;example.com&quot; target=&quot;_blank&quot;&gt;Text Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+- 这样就能够在一个新窗口里面跳转了
+
+- 也可以通过href来链接javascript(并不建议这样做)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;javascript:myFunction();&quot;&gt;Run Code&lt;/a&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;myFunction(); return false;&quot;&gt;Run Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果还没有决定好要链接什么，可以用`#`来代替要链接的内容
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;#!&quot; onclick=&quot;myFunction();&quot;&gt;Run Code&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+- 链接到邮箱地址
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;邮箱地址:example@example.com&quot;&gt;Send email&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;邮箱地址：example@example.com?cc=example2@example.com&amp;amp;bcc=example2@example.com&quot;&gt;Send email&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 如果要在邮箱中省去再打一遍邮件内容和主题的过程，可以加入如下代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;邮件地址:example@example.com?subject=主题&amp;amp;body=内容&quot;&gt;Send email&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## 处理列表
+
+在网页中肯定会有用到列表的时候，那么用h5该怎么去表示呢？
+
+- 有条理的列表
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;li&gt;Another Item&lt;/li&gt; &lt;li&gt;Yet Another Item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 这个在网页中的显示效果大致如下
+ 1. Item
+ 2. Another Item
+ 3. Yet Another Item
+
+- 如果想改成不是1开头的列表的话，在开头加入如下的代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start=&quot;你希望列表开始的数字&quot;&gt;
+
+```
+- 无序列表
+```
+&lt;ul&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;li&gt;Another Item&lt;/li&gt; &lt;li&gt;Yet Another Item&lt;/li&gt;
+&lt;/ul&gt;
+
+```
+- 缩进列表
+
+```
+&lt;ul&gt;
+&lt;li&gt;item 1&lt;/li&gt; &lt;li&gt;item 2
+&lt;ul&gt;
+&lt;li&gt;sub-item 2.1&lt;/li&gt; &lt;li&gt;sub-item 2.2&lt;/li&gt;
+&lt;/ul&gt; &lt;/li&gt;
+&lt;li&gt;item 3&lt;/li&gt; &lt;/ul&gt;
+```
+## 表格
+
+在网页中也有需要用到表格的地方，毕竟你总不能直接截个Excel之类的软件的图放在网页上吧
+
+- 简单表格
+```
+&lt;table&gt; &lt;tr&gt;
+&lt;th&gt;Heading 1/Column 1&lt;/th&gt;
+&lt;th&gt;Heading 2/Column 2&lt;/th&gt; &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Row 1 Data Column 1&lt;/td&gt; &lt;td&gt;Row 1 Data Column 2&lt;/td&gt;
+&lt;/tr&gt; &lt;tr&gt;
+&lt;td&gt;Row 2 Data Column 1&lt;/td&gt;
+&lt;td&gt;Row 2 Data Column 2&lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt;
+```
+
+- 这种简单的表格看上去并不美观，我们可以给他增加行数和列数
+```
+&lt;table&gt; &lt;tr&gt;
+&lt;td&gt;row 1 col 1&lt;/td&gt; &lt;td&gt;row 1 col 2&lt;/td&gt; &lt;td&gt;row 1 col 3&lt;/td&gt;
+&lt;/tr&gt; &lt;tr&gt;
+&lt;td colspan=&quot;3&quot;&gt;This second row spans all three columns&lt;/td&gt; &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&quot;2&quot;&gt;This cell spans two rows&lt;/td&gt; &lt;td&gt;row 3 col 2&lt;/td&gt;
+&lt;td&gt;row 3 col 3&lt;/td&gt;
+&lt;/tr&gt; &lt;tr&gt;
+&lt;td&gt;row 4 col 2&lt;/td&gt;
+&lt;td&gt;row 4 col 3&lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt;
+```
+- 如果你觉得还是不够详细，并想把列祖组合在一起的话，可以用下面的代码
+```
+&lt;table&gt;
+&lt;colgroup span=&quot;2&quot;&gt;&lt;/colgroup&gt; &lt;colgroup span=&quot;2&quot;&gt;&lt;/colgroup&gt; ...
+&lt;/table&gt;
+```
+
+当然我觉得h5自带的表格样式其实挺不好用的，表格相关的我们到了css再说
+
+## 插入图片和视频
+
+- 插入图片
+
+```
+&amp;lt;img src=&quot;图片地址及名字&quot; alt=&quot;图片名字&quot;style=&quot;width:宽度数字px;height:高度数字px;&amp;gt;
+
+```
+- 插入视频
+
+```
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;&quot;&gt;
+&lt;!-- 高度和宽度 --&gt;
+  &lt;source src=&quot;视频名字&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+
+```
+
+关于html5最最最基本的东西基本就是这些，了解后可以轻松编写一些简单的网页，但是如果想要做好一个网站，还是需要css和js的帮助.
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 07 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/07/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E4%BA%86%E8%A7%A3HTML5/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/07/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E4%BA%86%E8%A7%A3HTML5/</guid>
+        
+        
+      </item>
     
       <item>
         <title>安卓学习笔记（三）</title>

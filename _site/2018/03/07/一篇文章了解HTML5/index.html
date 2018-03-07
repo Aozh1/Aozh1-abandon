@@ -10,7 +10,7 @@
     <meta name="keywords"  content="">
     <meta name="theme-color" content="#000000">
     
-    <title>安卓学习笔记（三） - AZ Blog</title>
+    <title>一篇文章了解HTML5 - AZ Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/2018/02/17/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%89/">
+    <link rel="canonical" href="http://localhost:4000/2018/03/07/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E4%BA%86%E8%A7%A3HTML5/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -174,12 +174,12 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>安卓学习笔记（三）</h1>
+                    <h1>一篇文章了解HTML5</h1>
                     
                     
                     <h2 class="subheading"></h2>
                     
-                    <span class="meta">Posted by AoZhi on February 17, 2018</span>
+                    <span class="meta">Posted by AoZhi on March 7, 2018</span>
                 </div>
             </div>
         </div>
@@ -197,146 +197,224 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<p><em>开始为第一个用户界面添加一个小功能</em>
-（注：android stdio的版本为3.0.1，不同版本可能存在一定的差异，学习时建议在谷歌官网下载最新版）</p>
+				<h1 id="一篇文章了解html5">一篇文章了解HTML5</h1>
 
-<h1 id="给按钮添加功能">给按钮添加功能</h1>
+<p><em>市面上的html5教程冗长且难于理解，实际上html5是一门非常容易入门的语言，本篇文章让你初步了解html5，进入建立网站的大门</em></p>
+
+<h2 id="认识基本结构">认识基本结构</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="c">&lt;!-- 这个是头文件 --&gt;</span>
+<span class="nt">&lt;html&gt;</span>          
+<span class="c">&lt;!-- 这个是html的标志 --&gt;</span>
+<span class="nt">&lt;head&gt;</span>          
+<span class="c">&lt;!-- 这儿填你需要引入的文件，以后再讲 --&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- 这个理解为引入的字符 --&gt;</span>
+  <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+  <span class="c">&lt;!-- 两个title之间可以填入网站的名字 --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>          
+<span class="c">&lt;!-- body，顾名思义，网页的主体 --&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>认识h5基本结构<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>两个p之间可以插入文字，也就是段落<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="c">&lt;!-- 结束网页内容 --&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+
+</code></pre></div></div>
+
+<h2 id="处理文字">处理文字</h2>
 
 <ul>
-  <li>打开 app &gt; java &gt; com.example.myfirstapp（你当初创建的文件名） &gt; MainActivity 添加几行代码，现在暂时不了解这些代码没有关系，可以理解为给程序添加功能所必要的条件。
-    <h2 id="java版本">java版本</h2>
-    <p>```
-public class MainActivity extends AppCompatActivity {
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_main);
-  }</p>
+  <li>HTML使用<code class="highlighter-rouge">&lt;p&gt;</code>标签定义段落，具体使用方法如下：
+```</li>
+</ul>
+<p>This is a paragraph.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果你想高亮段落中的某一段文字，可以使用  `&lt;mark&gt;`标签
+</code></pre></div></div>
+<p><mark>我是被高亮的部分</mark></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果想加粗某一段文字，可以使用`&lt;b&gt;`标签
+</code></pre></div></div>
+<p><b>Bold Text Here</b></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果想实现某一段文字的倾斜，可以使用`&lt;i&gt;`或者`&lt;em&gt;`标签
+</code></pre></div></div>
+<p><i>Italicized Text Here</i>
+<em>Italicized Text Here</em></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果想给文字添加下划线，可以使用`&lt;u&gt;`标签
+</code></pre></div></div>
+<p><u>mispelled</u></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果想标记某段文字让他显示省略形式，可以使用`&lt;abbr&gt;`
+</code></pre></div></div>
+<p><abbr title="Hypertext Markup Language">HTML</abbr></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果要标记某段文字被删除，可以使用`&lt;del&gt;`
+</code></pre></div></div>
+<p><del>Deleted Text</del></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- 如果要插入某段文字，使用`&lt;ins&gt;`
+</code></pre></div></div>
+<p><ins>New Text</ins></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 文字的上标和下标
 
-    <p>/** Called when the user taps the Send button */
-  public void sendMessage(View view) {
-      // Do something in response to button
-  }
-}</p>
-  </li>
+</code></pre></div></div>
+<p><sup>superscript here</sup>
+<!-- 这是上标 -->
+<sub>subscript here</sub>
+<!-- 这是下标 --></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 处理链接
+
+- HTML链接使用`&lt;a&gt;`标签定义你想定义的东西，东西链接地址在`href`属性中进行指定。
+
+
+- 比如你想实现点击某一段文字，打开网页的效果，可以敲入如下代码
+</code></pre></div></div>
+<p><a href="https://我的网站地址">我想去的网站</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 上文的链接改成你喜欢的网站链接，即可实现上文所说的效果。
+
+- 如果要链接另外一个标题的话，可以写下如下的代码
+</code></pre></div></div>
+<h2 id="Topic1">First topic</h2>
+<p>Content about the first topic</p>
+<h2 id="Topic2">Second topic</h2>
+<p>Content about the second topic</p>
+<h1>Table of Contents</h1>
+<p><a href="#Topic1">Click to jump to the First Topic</a>
+<a href="#Topic2">Click to jump to the Second Topic</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 这段话的意思就是点击jump to first/second Topic 可以跳转到第一/二个标题。
+
+- 当然，链接的内容还可以是电话，例如下面这行代码：
+</code></pre></div></div>
+<p><a href="tel:1234567890">Call us</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  当有用户点击上面这行代码的时候，他的设备会为他自动跳转电话界面
+
+- 如果想在一个新的窗口打开跳转的网页的话，可以这么处理
+
+</code></pre></div></div>
+<p><a href="example.com" target="_blank">Text Here</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- 这样就能够在一个新窗口里面跳转了
+
+- 也可以通过href来链接javascript(并不建议这样做)
+</code></pre></div></div>
+<p><a href="javascript:myFunction();">Run Code</a>
+<a href="#" onclick="myFunction(); return false;">Run Code</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果还没有决定好要链接什么，可以用`#`来代替要链接的内容
+</code></pre></div></div>
+<p><a href="#!" onclick="myFunction();">Run Code</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- 链接到邮箱地址
+</code></pre></div></div>
+<p><a href="邮箱地址:example@example.com">Send email</a></p>
+
+<p><a href="邮箱地址：example@example.com?cc=example2@example.com&amp;bcc=example2@example.com">Send email</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 如果要在邮箱中省去再打一遍邮件内容和主题的过程，可以加入如下代码
+</code></pre></div></div>
+<p><a href="邮件地址:example@example.com?subject=主题&amp;body=内容">Send email</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 处理列表
+
+在网页中肯定会有用到列表的时候，那么用h5该怎么去表示呢？
+
+- 有条理的列表
+</code></pre></div></div>
+<ol>
+<li>Item</li>
+<li>Another Item</li> <li>Yet Another Item</li>
+</ol>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 这个在网页中的显示效果大致如下
+ 1. Item
+ 2. Another Item
+ 3. Yet Another Item
+
+- 如果想改成不是1开头的列表的话，在开头加入如下的代码
+</code></pre></div></div>
+<ol start="你希望列表开始的数字">
+
+```
+- 无序列表
+```
+<ul>
+<li>Item</li>
+<li>Another Item</li> <li>Yet Another Item</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## KOTLIN（2017年开始支持kotlin）
-</code></pre></div></div>
-<p>class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }</p>
+```
+- 缩进列表
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Called when the user taps the Send button */
-fun sendMessage(view: View) {
-    // Do something in response to button
-} }
-</code></pre></div></div>
+```
+<ul>
+<li>item 1</li> <li>item 2
+<ul>
+<li>sub-item 2.1</li> <li>sub-item 2.2</li>
+</ul> </li>
+<li>item 3</li> </ul>
+```
+## 表格
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-添加了这些代码后，你可能会看到如图所示的许多小错误，下面我们来修复他们
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-719717d375ffc76a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-选择错误的地方，然后按下快捷键option+enter 会出现快捷修复选项，我们选择import class
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-b5d0c9f5e493a59a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+在网页中也有需要用到表格的地方，毕竟你总不能直接截个Excel之类的软件的图放在网页上吧
 
-- 返回 activity_main.xml文件，我们添加button和这个sendmessage之间的关联。
-选择button，然后在属性页面中搜索oncilck（意思是当你触碰这个按钮时会触发的功能）
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-20777ed7591cc221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-我们选择sendmessage，也就是我们刚刚在代码中添加的那一行功能。
-现在只要我们点击这个按钮，系统就会响应sendmessage这一几行代码。
+- 简单表格
+```
+<table> <tr>
+<th>Heading 1/Column 1</th>
+<th>Heading 2/Column 2</th> </tr>
+<tr>
+<td>Row 1 Data Column 1</td> <td>Row 1 Data Column 2</td>
+</tr> <tr>
+<td>Row 2 Data Column 1</td>
+<td>Row 2 Data Column 2</td> </tr>
+</table>
+```
 
-# 建立一个intend
-&gt; intend通常用于两个活动之间提供运行时绑定的对象
+- 这种简单的表格看上去并不美观，我们可以给他增加行数和列数
+```
+<table> <tr>
+<td>row 1 col 1</td> <td>row 1 col 2</td> <td>row 1 col 3</td>
+</tr> <tr>
+<td colspan="3">This second row spans all three columns</td> </tr>
+<tr>
+<td rowspan="2">This cell spans two rows</td> <td>row 3 col 2</td>
+<td>row 3 col 3</td>
+</tr> <tr>
+<td>row 4 col 2</td>
+<td>row 4 col 3</td> </tr>
+</table>
+```
+- 如果你觉得还是不够详细，并想把列祖组合在一起的话，可以用下面的代码
+```
+<table>
+<colgroup span="2"></colgroup> <colgroup span="2"></colgroup> ...
+</table>
+```
 
-- 在MainActivity，添加EXTRA_MESSAGE和 sendMessage代码(目前只提供java)
+当然我觉得h5自带的表格样式其实挺不好用的，表格相关的我们到了css再说
 
-</code></pre></div></div>
-<p>public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = “com.example.myfirstapp.MESSAGE”;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }</p>
+## 插入图片和视频
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Called when the user taps the Send button */
-public void sendMessage(View view) {
-    Intent intent = new Intent(this, DisplayMessageActivity.class);
-    EditText editText = (EditText) findViewById(R.id.editText);
-    String message = editText.getText().toString();
-    intent.putExtra(EXTRA_MESSAGE, message);
-    startActivity(intent);
-} }
-</code></pre></div></div>
+- 插入图片
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-添加完后，你的代码应该是这个样式的
-（仍有部分错误：DisplayMessageActivity）
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-1d8ee1a4546b5859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+&lt;img src="图片地址及名字" alt="图片名字"style="width:宽度数字px;height:高度数字px;&gt;
 
+```
+- 插入视频
 
+```
+<video width="320" height="240" controls="">
+<!-- 高度和宽度 -->
+  <source src="视频名字" type="video/mp4" />
+</video>
 
+```
 
-不过没有关系，现在我们就来解决它
-
-在project窗口中，右键单击app 文件夹选择New &gt; Activity &gt; Empty Activity.
-
-更改这个新的activity的名字为displaymessageactivity， 点finish
-
-![imag.png](http://upload-images.jianshu.io/upload_images/10632197-b933952013d6b4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-# 添加文字反馈
-
-我们创建好了这个新的空白的activity后，打开app &gt; res &gt; layout &gt; activity_display_message.xml.
-
-像之前学过的一样，这次我们添加一个textview（还记得第一节课的helloworld吗？），唯一的不同是记得打开图上红框的按钮
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-a26f96514ac729b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-可以在属性面板给他添加你喜欢颜色以及大小
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-2ff8c9a29d55e61b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-# 显示文字
-打开DisplayMessageActivity文件，添加如下代码
-
-</code></pre></div></div>
-<p>@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_display_message);</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Get the Intent that started this activity and extract the string
-Intent intent = getIntent();
-String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-// Capture the layout's TextView and set the string as its text
-TextView textView = findViewById(R.id.textView);
-textView.setText(message); }
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>如果代码正确，应该显示为下图（有不对的地方请用option+enter自动修复）
-![image.png](http://upload-images.jianshu.io/upload_images/10632197-e434dd76dfc02536.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-#添加导航栏
-
-部分安卓手机是没有返回按钮的，所以我们要给他添加一个导航栏
-
-打开app &gt; manifests &gt; AndroidManifest.xml
-
-添加如下代码
-
-</code></pre></div></div>
-<activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
-    <!-- The meta-data tag is required if you support API level 15 and lower -->
-    <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
-</activity>
-<p>```</p>
-
-<p>好了，到这里，你的第一个有着完整功能的app就建好了，插上你的安卓手机，安装你亲手写的app试试吧，他的效果应该就像下图一样</p>
-
-<p><img src="http://upload-images.jianshu.io/upload_images/10632197-fd36dfa799e93402.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
+关于html5最最最基本的东西基本就是这些，了解后可以轻松编写一些简单的网页，但是如果想要做好一个网站，还是需要css和js的帮助.
+</ol>
 
 
                 <hr style="visibility: hidden;">
@@ -344,19 +422,12 @@ textView.setText(message); }
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/02/15/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%BA%8C/" data-toggle="tooltip" data-placement="top" title="安卓学习笔记（二）">
+                        <a href="/2018/02/17/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E4%B8%89/" data-toggle="tooltip" data-placement="top" title="安卓学习笔记（三）">
                         Previous<br>
-                        <span>安卓学习笔记（二）</span>
+                        <span>安卓学习笔记（三）</span>
                         </a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2018/03/07/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E4%BA%86%E8%A7%A3HTML5/" data-toggle="tooltip" data-placement="top" title="一篇文章了解HTML5">
-                        Next<br>
-                        <span>一篇文章了解HTML5</span>
-                        </a>
-                    </li>
                     
                 </ul>
 
