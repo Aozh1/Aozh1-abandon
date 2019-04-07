@@ -16,4 +16,4 @@
 
 ## 2019-04-08
 
-迁移到Aozh1.github.io
+迁移到Aozh1.github.io （https://github.com/Aozh1/Aozh1.github.io）
